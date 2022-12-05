@@ -1,0 +1,81 @@
+* {
+    margin: 0;
+    padding: 0;
+    /* font-family: 'Comis Sans MS', cursive, sans-serif; */
+    font-family: 'Kalam', cursive;
+    transition: all .3s linear;
+    user-select: none;
+}
+.content {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.cell {
+    width: 100px;
+    height: 100px;
+    border: 2px solid #333;
+    font-size: 70px;
+    font-weight: 600;
+    line-height: 100px;
+    text-transform: uppercase;
+    text-align: center;    
+    cursor: pointer;
+}
+/* .cell:hover {
+    background-color: #999;
+} */
+.row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.row:first-child .cell {
+    border-top: none;
+}
+.row:last-child .cell {
+    border-bottom: none;
+}
+.row .cell:first-child {
+    border-left: none;
+}
+.row .cell:last-child {
+    border-right: none;
+}
+.win-row {
+    background-color: #f00;
+    color: #fff;
+}
+.gameOver {
+    position: absolute;
+    width: 250px;
+    height: 200px;
+    background: rgba(0, 255, 0, .8);
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column nowrap;
+    display: none; /* ẩn màn hình kết thúc game */
+}
+.gameState {
+    font-size: 2em;
+}
+.replay {
+    margin-top: 10px;
+    padding: 5px 10px;
+    font-weight: 600;
+    border: 1px solid #000;
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+}
+.replay:hover {
+    background: #333;
+    color: #ddd;
+}
+.show {
+    display: flex;
+}
